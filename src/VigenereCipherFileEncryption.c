@@ -7,10 +7,9 @@ main(int argc, char **argv)
 {
 	FILE *outf, *inf;
 	char ch;		//new encrypted char
-	char k[129];	//vetor para a shared-key
+	char k[129];		//vetor para a shared-key
 	int num;		//encrypt or decrypt
-	char replace;	//replace it? yes or no?
-	char params[257]= "abcdeghijklmnopqrstvuwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	char replace;		//replace it? yes or no?
 	
 
 	if (argc!=3) {
@@ -56,7 +55,7 @@ main(int argc, char **argv)
 		scanf(" %d",&num);
 		//scanf("%*s"); //read and ignore the value
 		//getchar(); //read and ignore the value
-		fflush(stdin); //works better
+		fflush(stdin); //works better, bug fixer
 	}
 	while (num!=0 && num!=1);
 
@@ -67,12 +66,12 @@ main(int argc, char **argv)
 	printf("\n");
 	
 
-	//XXXXXXXXXXXXXXXXXX ENCRIPTAR XXXXXXXXXXXXXXXX
+	//XXXXXXXXXXXXXXXXXX ENCRYPT XXXXXXXXXXXXXXXX
 	
 	int i,j,n=0;
-	//i- posicao do char atual da string message(to be encrypted)
-	//j- auxiliar para fazer shift ao char, mais eficiente para saltar do "z" para "a"
-	//n- posicao do char da string key
+	//i- char position from message (to be encrypted/decrypted)
+	//j- helper to shift current char, then jump from "z" to "a" and vice versa
+	//n- char position from sharedKey.
 
 	if (num==0) {	//encrypt
 		
