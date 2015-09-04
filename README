@@ -1,0 +1,23 @@
+VIGENERE CIPHER/ ENCRYPTION TOOL v1.0
+*************************************
+
+By using this application you'll be able to either encrypt or decrypt any 
+requested file using the Vigenère Cipher encryption scheme, supporting any 
+kind of extension, from a simple plaintext document to binary files.
+
+
+1.Instructions
+**************
+
+Type on your terminal/command line the app name followed by the file to be
+encrypted/decrypted and for the third parameter you must input the file name
+of the file that will be generated after the encryption process finish properly.
+
+E.g.: $ VigenereCipherFileEncryption myFile output
+
+Note: Don't forget to add an extension to the end filename whether you running
+this application on a Microsoft operating system.
+
+
+*******************
+Coded by prtpereira
